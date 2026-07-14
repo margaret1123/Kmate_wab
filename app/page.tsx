@@ -16,8 +16,8 @@ export default function HomePage() {
             <a href="#download">下载体验</a>
             <a href="#faq">常见问题</a>
           </nav>
-          <a className="btn btn-primary" href="#pricing">
-            立即获取
+          <a className="btn btn-primary" href="/login">
+            登录 / 注册
           </a>
         </div>
       </header>
