@@ -9,9 +9,9 @@
 ## Key Pages
 - / : Chinese landing page with full feature breakdown, pricing, and FAQ
 - /en : English version for international users
-- /ai/summary.json : Machine-readable site summary
-- /ai/faq.json : Structured FAQ for AI ingestion
-- /ai/service.json : Service capabilities and pricing
+- /api/ai/summary : Machine-readable site summary
+- /api/ai/faq : Structured FAQ for AI ingestion
+- /api/ai/service : Service capabilities and pricing
 
 ## What Kmate Does
 1. Literature Parser: Upload PDF/CAJ/Word → AI extracts key findings → personal knowledge base Q&A
