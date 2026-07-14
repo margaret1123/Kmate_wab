@@ -1,0 +1,38 @@
+# Kmate AI Crawler Permissions
+# https://kmate-wab.vercel.app
+
+User-Agent: GPTBot
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /api/stripe/
+
+User-Agent: ChatGPT-User
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /api/stripe/
+
+User-Agent: Claude-User
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /api/stripe/
+
+User-Agent: PerplexityBot
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /api/stripe/
+
+User-Agent: Google-Extended
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /api/stripe/
+
+User-Agent: *
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /api/stripe/

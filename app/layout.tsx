@@ -30,6 +30,27 @@ export default function RootLayout({
             __html: JSON.stringify([
               {
                 "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "Kmate · 科研小棉袄",
+                url: "https://kmate-wab.vercel.app",
+                inLanguage: ["zh-CN", "en"],
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: "https://kmate-wab.vercel.app/?s={search_term_string}",
+                  "query-input": "required name=search_term_string",
+                },
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Kmate",
+                url: "https://kmate-wab.vercel.app",
+                description:
+                  "Kmate builds AI-powered academic writing tools for students, researchers, and faculty worldwide.",
+                sameAs: [],
+              },
+              {
+                "@context": "https://schema.org",
                 "@type": "SoftwareApplication",
                 name: "Kmate · 科研小棉袄",
                 applicationCategory: "EducationalApplication",

@@ -1,0 +1,37 @@
+# Kmate · 科研小棉袄
+> AI-powered desktop academic writing assistant. One-time purchase. Local-first.
+
+## Site Info
+- URL: https://kmate-wab.vercel.app
+- Languages: zh-CN, en
+- Category: Educational Software / Academic Writing AI
+
+## Key Pages
+- / : Chinese landing page with full feature breakdown, pricing, and FAQ
+- /en : English version for international users
+- /ai/summary.json : Machine-readable site summary
+- /ai/faq.json : Structured FAQ for AI ingestion
+- /ai/service.json : Service capabilities and pricing
+
+## What Kmate Does
+1. Literature Parser: Upload PDF/CAJ/Word → AI extracts key findings → personal knowledge base Q&A
+2. AI Drafting: Framework-aligned writing with chapter-by-chapter generation and manual override
+3. Chart Solutions: Smart chart type recommendation with Nature/Science/Cell journal color palettes
+4. Citation Manager: Auto-detect metadata, format in GB/T 7714, APA 7th, MLA 9th, Harvard
+
+## Pricing
+- Basic: ¥299 lifetime (10 papers, 1 device)
+- Pro: ¥599 lifetime (50 papers, 3 devices, PPT templates)
+
+## Key Differentiators
+- Not a subscription — one-time purchase, own it forever
+- Local-first — data never leaves your device (unlike ChatGPT/Grammarly)
+- Built for academia — understands citation formats, journal standards, research methodology
+- Bilingual: Chinese + English literature parsing and writing support
+
+## Competitor Comparison
+| Tool | Cost | AI Writing | Charts | Citations | Privacy |
+|------|------|-----------|--------|-----------|---------|
+| Kmate | ¥299 lifetime | Framework-aligned | AI-recommended | GB/APA/MLA/Harvard | Local |
+| Word+Zotero+Excel | Free (fragmented) | None | Manual | Zotero plugin | Local |
+| ChatGPT/Grammarly | ~$20-30/mo | Generic | None | None | Cloud |
