@@ -1,0 +1,49 @@
+﻿{
+    "version":  1,
+    "templates":  [
+                      {
+                          "downloadUrl":  "/api/templates/graduation-defense/download",
+                          "id":  "graduation-defense",
+                          "category":  "academic",
+                          "description":  "学术毕业答辩模板，36页全流程",
+                          "descriptionEn":  "Academic defense, 36 slides",
+                          "nameEn":  "Graduation Defense",
+                          "name":  "毕业答辩",
+                          "license":  "CC-BY-NC-4.0",
+                          "previewUrl":  "/templates/graduation-defense/preview.jpg"
+                      },
+                      {
+                          "downloadUrl":  "/api/templates/graduation-defense-2/download",
+                          "id":  "graduation-defense-2",
+                          "category":  "academic",
+                          "description":  "简约蓝白学术答辩模板",
+                          "descriptionEn":  "Clean blue-white academic defense",
+                          "nameEn":  "Graduation Defense Blue",
+                          "name":  "毕业答辩 · 简约蓝",
+                          "license":  "CC-BY-NC-4.0",
+                          "previewUrl":  "/templates/graduation-defense-2/preview.jpg"
+                      },
+                      {
+                          "downloadUrl":  "/api/templates/premium-business/download",
+                          "id":  "premium-business",
+                          "category":  "business",
+                          "description":  "高端商务汇报模板，深蓝+金色调",
+                          "descriptionEn":  "Premium business report, navy + gold",
+                          "nameEn":  "Premium Business Blue-Gold",
+                          "name":  "高端商务 · 深蓝金",
+                          "license":  "CC-BY-NC-4.0",
+                          "previewUrl":  "/templates/premium-business/preview.jpg"
+                      },
+                      {
+                          "downloadUrl":  "/api/templates/premium-general/download",
+                          "id":  "premium-general",
+                          "category":  "general",
+                          "description":  "通用精品模板，多彩现代风格",
+                          "descriptionEn":  "General premium, colorful modern",
+                          "nameEn":  "Premium General Colorful",
+                          "name":  "精品通用 · 多彩",
+                          "license":  "CC-BY-NC-4.0",
+                          "previewUrl":  "/templates/premium-general/preview.jpg"
+                      }
+                  ]
+}
