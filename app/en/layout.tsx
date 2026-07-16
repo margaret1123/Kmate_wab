@@ -1,27 +1,24 @@
 import type { Metadata } from "next";
-import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "Kmate · AI Academic Writing & Research Assistant",
+  title: "Continuous research creation workspace",
   description:
-    "Kmate is an AI-powered desktop application for academic writing, literature review, chart generation, and citation management. One-time purchase ¥299 (~$42 USD). Runs locally on Windows & macOS.",
+    "SciNest keeps papers, references, notes and project files in one continuous workflow for editable writing, scientific figures and presentations.",
   alternates: {
-    languages: {
-      "zh-CN": "/",
-      en: "/en",
-    },
+    canonical: "/en",
+    languages: { "zh-CN": "/", en: "/en", "x-default": "/" },
+  },
+  openGraph: {
+    type: "website",
+    url: "/en",
+    title: "SciNest · Continuous research creation workspace",
+    description:
+      "Turn scattered research materials into editable writing, scientific figures and presentations without rebuilding context between tools.",
+    locale: "en_US",
+    alternateLocale: ["zh_CN"],
   },
 };
 
-export default function EnLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <link rel="alternate" hrefLang="zh-CN" href="https://kmate-wab.vercel.app/" />
-        <link rel="alternate" hrefLang="en" href="https://kmate-wab.vercel.app/en" />
-        <link rel="alternate" hrefLang="x-default" href="https://kmate-wab.vercel.app/" />
-      </head>
-      <body>{children}</body>
-    </html>
-  );
+export default function EnglishLayout({ children }: { children: React.ReactNode }) {
+  return <div lang="en">{children}</div>;
 }
