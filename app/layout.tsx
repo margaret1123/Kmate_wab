@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./scinest-assets.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://kmate-wab.vercel.app";
 
