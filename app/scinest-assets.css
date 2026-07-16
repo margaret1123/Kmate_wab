@@ -4,19 +4,3 @@
 [lang="zh-CN"] img[alt="SciNest presentation workflow"] {
   content: url('/scinest/real-ui-zh.webp');
 }
-
-[lang="en"] img[alt="SciNest continuous research workspace"] {
-  content: url('/scinest/hero-en.svg');
-}
-
-[lang="en"] img[alt="SciNest writing workspace"] {
-  content: url('/scinest/writing-ui-en.svg');
-}
-
-[lang="en"] img[alt="SciNest scientific figure editor"] {
-  content: url('/scinest/figures-ui-en.svg');
-}
-
-[lang="en"] img[alt="SciNest presentation workflow"] {
-  content: url('/scinest/ppt-ui-en.svg');
-}
