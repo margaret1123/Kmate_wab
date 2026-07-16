@@ -1,5 +1,11 @@
+import { PromoImageHydrator } from "../promo-image-hydrator";
 import { SciNestHome } from "../scinest-home";
 
 export default function EnglishHomePage() {
-  return <SciNestHome locale="en" />;
+  return (
+    <>
+      <PromoImageHydrator locale="en" />
+      <SciNestHome locale="en" />
+    </>
+  );
 }
