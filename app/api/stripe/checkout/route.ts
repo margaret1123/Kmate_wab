@@ -1,44 +1,75 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getStripe } from "@/lib/stripe";
+import { createClient } from "@/lib/supabase-server";
 
-const PRODUCTS: Record<string, { name: string; amount: number }> = {
-  basic: { name: "科研小棉袄 基础版", amount: 29900 },
-  pro: { name: "科研小棉袄 专业版", amount: 59900 },
+type Market = "cny" | "usd";
+
+const PRICE_ENV_BY_MARKET: Record<Market, string> = {
+  cny: "STRIPE_PRICE_SCINEST_CNY",
+  usd: "STRIPE_PRICE_SCINEST_USD",
 };
+
+function isMarket(value: unknown): value is Market {
+  return value === "cny" || value === "usd";
+}
 
 export async function POST(req: NextRequest) {
   try {
-    const { productId, email } = await req.json();
+    if (process.env.SCINEST_CHECKOUT_ENABLED !== "true") {
+      return NextResponse.json(
+        { error: "付款功能正在完成交付验证，暂未开放。" },
+        { status: 503 }
+      );
+    }
 
-    const product = PRODUCTS[productId];
-    if (!product) {
-      return NextResponse.json({ error: "Invalid product" }, { status: 400 });
+    const body = await req.json();
+    const market: Market = body.market === undefined ? "cny" : body.market;
+
+    if (!isMarket(market)) {
+      return NextResponse.json({ error: "Invalid market" }, { status: 400 });
+    }
+
+    const supabase = await createClient();
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser();
+
+    if (authError || !user?.email) {
+      return NextResponse.json({ error: "请先登录后再购买。" }, { status: 401 });
+    }
+
+    const priceEnvName = PRICE_ENV_BY_MARKET[market];
+    const priceId = process.env[priceEnvName];
+
+    if (!priceId) {
+      console.error(`Missing Stripe price environment variable: ${priceEnvName}`);
+      return NextResponse.json({ error: "付款配置尚未完成。" }, { status: 503 });
     }
 
     const stripe = getStripe();
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
-      line_items: [
-        {
-          price_data: {
-            currency: "cny",
-            product_data: { name: product.name },
-            unit_amount: product.amount,
-          },
-          quantity: 1,
-        },
-      ],
       mode: "payment",
-      success_url: `${req.nextUrl.origin}/dashboard?success=true`,
+      line_items: [{ price: priceId, quantity: 1 }],
+      success_url: `${req.nextUrl.origin}/dashboard?success=true&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${req.nextUrl.origin}/dashboard?canceled=true`,
-      customer_email: email,
+      customer_email: user.email,
+      client_reference_id: user.id,
       metadata: {
-        productId,
+        userId: user.id,
+        productId: "scinest_founding",
+        market,
       },
     });
 
+    if (!session.url) {
+      return NextResponse.json({ error: "无法创建付款页面。" }, { status: 502 });
+    }
+
     return NextResponse.json({ url: session.url });
-  } catch (err: any) {
-    return NextResponse.json({ error: err.message }, { status: 500 });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : "Unknown checkout error";
+    console.error("Stripe checkout error:", message);
+    return NextResponse.json({ error: "暂时无法开始付款，请稍后再试。" }, { status: 500 });
   }
 }
