@@ -19,14 +19,14 @@ export default async function DashboardPage() {
     .eq("status", "paid")
     .order("created_at", { ascending: false });
 
-  const hasBasic = orders?.some((o: any) => o.product_id === "basic");
-  const hasPro = orders?.some((o: any) => o.product_id === "pro");
+  const hasFoundingEdition = orders?.some(
+    (order: { product_id?: string }) => order.product_id === "scinest_founding"
+  );
 
   return (
     <DashboardContent
       email={user.email!}
-      hasBasic={hasBasic || false}
-      hasPro={hasPro || false}
+      hasFoundingEdition={hasFoundingEdition || false}
       orders={orders || []}
     />
   );
