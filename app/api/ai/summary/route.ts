@@ -3,11 +3,47 @@ import { NextResponse } from "next/server";
 export async function GET() {
   return NextResponse.json(
     {
-      site: { name: "Kmate · 科研小棉袄", tagline: "AI Academic Writing & Research Assistant", url: "https://kmate-wab.vercel.app", languages: ["zh-CN", "en"], lastModified: "2026-07-14" },
-      summary: "Kmate is a desktop AI application for academic writing. It helps students, researchers, and faculty with: (1) literature parsing and knowledge-base Q&A from uploaded PDF/CAJ/Word files, (2) framework-aligned AI drafting where users approve chapter structure before content generation, (3) chart type recommendation with journal-grade color schemes, and (4) auto-formatted citations in GB/T 7714, APA 7th, MLA 9th, and Harvard styles. One-time purchase ¥299 (~$42 USD). Data runs locally, never uploaded to cloud.",
-      audience: ["Undergraduate students", "Graduate/PhD candidates", "Professors & researchers", "International students"],
-      pricing: { basic: { price: 299, currency: "CNY", period: "lifetime" }, pro: { price: 599, currency: "CNY", period: "lifetime" } },
-      competitorComparison: { kmate: { cost: "¥299 lifetime", literature: "AI extraction + Q&A", writing: "Framework-aligned", charts: "AI-recommended", citations: "GB/APA/MLA/Harvard", privacy: "Local" }, wordZotero: { cost: "Free", literature: "Manual", writing: "None", charts: "Manual Excel", citations: "Zotero plugin", privacy: "Local" }, chatgpt: { cost: "$20-30/mo", literature: "Not supported", writing: "Generic", charts: "Not supported", citations: "Not supported", privacy: "Cloud" } },
+      site: {
+        name: "SciNest · 科研小棉袄",
+        tagline: "Continuous research creation workspace",
+        url: "https://scinest-ai.vercel.app",
+        operator: "Jiaempower Pathways Limited",
+        languages: ["zh-CN", "en"],
+        lastModified: "2026-07-20",
+      },
+      summary:
+        "SciNest is a research creation workspace that keeps papers, references, notes and project materials connected while users move through research understanding, outlining, long-form writing and revision, scientific figure creation, and editable presentation production.",
+      workflow: [
+        "Import and organize research materials",
+        "Build project context and structure",
+        "Draft and revise editable long-form writing",
+        "Create and refine scientific figures",
+        "Produce editable presentation content and slides",
+      ],
+      audience: [
+        "Postgraduate students",
+        "Researchers and academics",
+        "Technical professionals",
+        "Research teams producing writing, figures and presentations",
+      ],
+      pricing: {
+        founding: { cny: 299, usd: 49 },
+        standardReference: { cny: 399, usd: 69 },
+        model: "one-time licence",
+        updates: "12 months of feature updates; the purchased version remains usable afterward",
+        modelApiCharges: "separate where applicable",
+        trial: "7 days",
+      },
+      dataBoundary: {
+        localProjectWorkspace: true,
+        projectFiles: "remain local by default",
+        aiTasks: "sent to the model provider selected and configured by the user",
+      },
+      limitations: [
+        "Generated content requires user review and editing.",
+        "SciNest does not guarantee publication, journal acceptance or academic outcomes.",
+        "SciNest does not claim that every operation always remains on-device.",
+      ],
     },
     { headers: { "Content-Type": "application/json", "Cache-Control": "public, max-age=86400" } }
   );

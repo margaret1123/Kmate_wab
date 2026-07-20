@@ -1,0 +1,6 @@
+[lang="zh-CN"] img[alt="SciNest continuous research workspace"],
+[lang="zh-CN"] img[alt="SciNest writing workspace"],
+[lang="zh-CN"] img[alt="SciNest scientific figure editor"],
+[lang="zh-CN"] img[alt="SciNest presentation workflow"] {
+  content: url('/scinest/real-ui-zh.webp');
+}

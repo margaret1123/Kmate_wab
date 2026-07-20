@@ -1,5 +1,5 @@
-# Kmate AI Crawler Permissions
-# https://kmate-wab.vercel.app
+# SciNest AI Crawler Permissions
+# https://scinest-ai.vercel.app
 
 User-Agent: GPTBot
 Allow: /

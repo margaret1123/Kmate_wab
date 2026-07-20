@@ -1,37 +1,42 @@
-# Kmate · 科研小棉袄
-> AI-powered desktop academic writing assistant. One-time purchase. Local-first.
+# SciNest · 科研小棉袄
+> A continuous research creation workspace for turning project materials into editable writing, scientific figures and presentations.
 
 ## Site Info
-- URL: https://kmate-wab.vercel.app
+- URL: https://scinest-ai.vercel.app
 - Languages: zh-CN, en
-- Category: Educational Software / Academic Writing AI
+- Operator: Jiaempower Pathways Limited
+- Category: Research Productivity Software
 
 ## Key Pages
-- / : Chinese landing page with full feature breakdown, pricing, and FAQ
-- /en : English version for international users
-- /api/ai/summary : Machine-readable site summary
-- /api/ai/faq : Structured FAQ for AI ingestion
-- /api/ai/service : Service capabilities and pricing
+- / : Chinese SciNest landing page
+- /en : English SciNest landing page
+- /api/ai/summary : Machine-readable product summary
+- /api/ai/faq : Structured product FAQ
+- /api/ai/service : Capabilities, pricing and usage boundaries
 
-## What Kmate Does
-1. Literature Parser: Upload PDF/CAJ/Word → AI extracts key findings → personal knowledge base Q&A
-2. AI Drafting: Framework-aligned writing with chapter-by-chapter generation and manual override
-3. Chart Solutions: Smart chart type recommendation with Nature/Science/Cell journal color palettes
-4. Citation Manager: Auto-detect metadata, format in GB/T 7714, APA 7th, MLA 9th, Harvard
+## What SciNest Does
+1. Keeps papers, references, notes and project materials connected inside one research project.
+2. Helps structure, draft and revise long-form research writing while preserving editable content.
+3. Creates scientific figure plans and editable figure outputs for continued refinement.
+4. Produces editable presentation content and slides from the same project context.
 
-## Pricing
-- Basic: ¥299 lifetime (10 papers, 1 device)
-- Pro: ¥599 lifetime (50 papers, 3 devices, PPT templates)
+## Product Model
+- Founding licence: ¥299 or US$49.
+- Standard reference price: ¥399 or US$69.
+- Includes 12 months of feature updates; the purchased version remains usable afterward.
+- Model provider API usage charges, where applicable, are separate.
+- A 7-day trial is available through the current trial entry flow.
 
-## Key Differentiators
-- Not a subscription — one-time purchase, own it forever
-- Local-first — data never leaves your device (unlike ChatGPT/Grammarly)
-- Built for academia — understands citation formats, journal standards, research methodology
-- Bilingual: Chinese + English literature parsing and writing support
+## Data and Model Boundary
+- SciNest is designed as a local project workspace.
+- Project files remain local by default.
+- Tasks that use an AI model are sent to the model provider selected and configured by the user.
+- SciNest does not claim that all processing always remains on-device.
 
-## Competitor Comparison
-| Tool | Cost | AI Writing | Charts | Citations | Privacy |
-|------|------|-----------|--------|-----------|---------|
-| Kmate | ¥299 lifetime | Framework-aligned | AI-recommended | GB/APA/MLA/Harvard | Local |
-| Word+Zotero+Excel | Free (fragmented) | None | Manual | Zotero plugin | Local |
-| ChatGPT/Grammarly | ~$20-30/mo | Generic | None | None | Cloud |
+## Intended Users
+Researchers, postgraduate students, academics and technical professionals who need one continuous workflow from research materials to writing, scientific figures and editable presentations.
+
+## Important Limits
+- SciNest does not guarantee publication, journal acceptance or academic outcomes.
+- It does not claim guaranteed Nature, Science or Cell quality.
+- Generated writing, figures and presentations require user review and editing.
