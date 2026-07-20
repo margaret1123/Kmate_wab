@@ -1,0 +1,15 @@
+import type { MetadataRoute } from "next";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://scinest-ai.vercel.app";
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/",
+      disallow: ["/login", "/dashboard", "/api/stripe/"],
+    },
+    sitemap: [`${siteUrl}/sitemap.xml`, `${siteUrl}/sitemap-llm.xml`],
+    host: siteUrl,
+  };
+}
